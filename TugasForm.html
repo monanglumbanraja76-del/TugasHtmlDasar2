@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: #000;
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 650px;
+        }
+
+        fieldset {
+            border: 1px solid #767676;
+            margin-bottom: 18px;
+            padding: 12px 15px 15px 15px;
+            border-radius: 0;
+        }
+
+        legend {
+            font-weight: normal;
+            font-size: 16px;
+            padding: 0 5px;
+        }
+
+        table.form-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table.form-table td {
+            padding: 4px 0;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        table.form-table tr td:first-child {
+            width: 210px;
+            white-space: nowrap;
+        }
+
+        table.form-table tr td:nth-child(2) {
+            width: 15px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        select {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            border: 1px solid #767676;
+            padding: 2px 4px;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #8e8e8e;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            width: 280px;
+            height: 100px;
+            resize: both;
+        }
+
+        .input-medium {
+            width: 160px;
+        }
+
+        .input-large {
+            width: 300px;
+        }
+
+        .input-small {
+            width: 150px;
+        }
+
+        select {
+            padding: 1px 2px;
+            background-color: #fff;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+
+        .radio-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            padding-top: 2px;
+        }
+
+        .checkbox-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin: 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .button-group button,
+        .button-group input[type="button"],
+        .button-group input[type="reset"],
+        .button-group input[type="submit"] {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            padding: 2px 8px;
+            background-color: #efefef;
+            border: 1px solid #767676;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .button-group button:active,
+        .button-group input:active {
+            background-color: #e0e0e0;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            table.form-table tr td:first-child {
+                width: 140px;
+                white-space: normal;
+            }
+            .input-large, textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Form Registrasi</h1>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <fieldset>
+                <legend>Biodata</legend>
+                <table class="form-table">
+                    <tr>
+                        <td>Nama Mahasiswa</td>
+                        <td>:</td>
+                        <td><input type="text" name="nama" class="input-medium" placeholder="Nama Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>No Induk Mahasiswa (NIM)</td>
+                        <td>:</td>
+                        <td><input type="text" name="nim" class="input-medium" value="123456789"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Mahasiswa</td>
+                        <td>:</td>
+                        <td><textarea name="alamat" placeholder="Alamat Anda"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>:</td>
+                        <td>
+                            <select name="tgl">
+                                <option value="01" selected>01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <!-- Tambahkan tanggal lainnya sesuai kebutuhan -->
+                            </select>
+                            <select name="bln">
+                                <option value="Januari" selected>Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <!-- Tambahkan bulan lainnya sesuai kebutuhan -->
+                            </select>
+                            <select name="thn">
+                                <option value="1990" selected>1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+                                <!-- Tambahkan tahun lainnya sesuai kebutuhan -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>
+                            <div class="radio-container">
+                                <label class="radio-group"><input type="radio" name="jenis_kelamin" value="Pria" checked> <b>Pria</b></label>
+                                <label class="radio-group"><input type="radio" name="jenis_kelamin" value="Wanita"> <b>Wanita</b></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Foto</td>
+                        <td>:</td>
+                        <td><input type="file" name="foto"></td>
+                    </tr>
+                    <tr>
+                        <td>URL Website</td>
+                        <td>:</td>
+                        <td><input type="text" name="url_website" class="input-large" placeholder="URL Website Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>Perguruan Tinggi</td>
+                        <td>:</td>
+                        <td><input type="text" name="perguruan_tinggi" class="input-small"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Info Akun</legend>
+                <table class="form-table">
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><input type="email" name="email" class="input-medium" placeholder="Email Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td>:</td>
+                        <td><input type="text" name="username" class="input-medium" placeholder="Username Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td><input type="password" name="password" class="input-medium" placeholder="Password Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>Ulangi Password</td>
+                        <td>:</td>
+                        <td><input type="password" name="ulangi_password" class="input-medium" placeholder="Password Anda"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kemampuan Dasar</legend>
+                <div class="checkbox-container">
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="HTML"> HTML</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="CSS"> CSS</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="Javascript"> Javascript</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="PHP"> PHP</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="MySQL"> MySQL</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="Laravel"> Laravel</label>
+                    <label class="checkbox-item"><input type="checkbox" name="skills[]" value="React Native"> React Native</label>
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Simpan">
+                <input type="button" value="Button">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
